@@ -29,7 +29,9 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   flex: 3;
+  position: relative;
 `;
+
 const Title = styled.h1`
   font-size: 60px;
 `;
@@ -38,10 +40,9 @@ const WhoAmI = styled.div`
   align-items: center;
   gap: 15px;
 `;
-const Line = styled.img`
-  height: 9px;
-`;
+
 const Subtitle = styled.h2`
+
 `;
 const Description = styled.p`
   font-size: 22px;
@@ -59,6 +60,23 @@ const Button = styled.button`
     cursor: pointer;
 `;
 const Image = styled.img`
+  height: 500px;
+  width: 500px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+
+  @keyframes animate {
+    to{
+      transform: translateY(50px);
+    }
+    
+  }
 `;
 
 const Hero = () => {
@@ -69,15 +87,15 @@ const Hero = () => {
           <Left>
             <Title>Think different.</Title>
             <WhoAmI>
-              <Line src="./img/line.png"/>
               <Subtitle>Who Am I</Subtitle>
             </WhoAmI>
-            <Description>Open Source enthusiast and full stack web developer from Turkey.</Description>
+            <Description>Open Source enthusiast and full stack web developer from Turkey. </Description>
+            {/* Oğuzhan Ural is a Software Engineer who closely follows current software technologies, develops software systems with engineering principles and constantly improves himself. */}
             <Button>Learn More</Button>
           </Left>
           <Right>
             {/* 3d model */}
-            <Image src="./img/moon.png" />
+            <Image src="./img/astronotProgrammer.png" />
           </Right>
         </Container>
     </Section>

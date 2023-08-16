@@ -12,6 +12,7 @@ const Container = styled.div`
   scrollbar-width: none;
   color: white;
   background-image: url("./img/bground.svg");
+  object-fit: cover;
   &::-webkit-scrollbar {
     display: none ;
   }
